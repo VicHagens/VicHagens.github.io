@@ -1,0 +1,8 @@
+ul li {
+    display: inline-block;
+    width: 9.375em;
+}
+
+ul li > a {
+    color: red;
+}

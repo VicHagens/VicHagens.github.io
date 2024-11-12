@@ -1,0 +1,6 @@
+.checked {
+    background-image: url("../images/checked_box.jpg");
+    background-size: 1em;
+    padding-left: 1em;
+    background-repeat: no-repeat;
+}
