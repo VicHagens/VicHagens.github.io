@@ -1,0 +1,16 @@
+body{
+    margin: 0px;
+    background-color: #EDF2F4;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    height: 550px;
+
+}
+
+header h1 {
+    margin: 0px;
+    color: red}

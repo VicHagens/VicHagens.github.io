@@ -1,0 +1,37 @@
+.dagen, td {
+    border-style: dotted;
+    border-width: 1px;
+}
+table {
+    border-collapse: collapse;
+    width: 25%;
+}
+
+
+
+th:first-child, th:last-child{
+    background-color: rgb(255, 220, 220);
+}
+.dagen {
+    color: rgb(200,190,240);
+    background-color: rgb(35,37,70);
+}
+
+.freeday {
+    background-color: rgb(250, 120, 120);
+}
+.maand  {
+    background-color: rgb(170, 170, 200) !important;
+}
+.grijs {
+    background-color: lightgray;
+    color: darkgrey;
+}
+.blauwstreep {
+    color: blue;
+    text-decoration: underline;
+}
+.weekend {
+    background-color: cyan;
+
+}
