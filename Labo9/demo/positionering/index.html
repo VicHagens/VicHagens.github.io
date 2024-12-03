@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid blue;
+            top:200px;
+            left:100px;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0px;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+    </style>
+</head>
+<body>
+
+
+<p>An element with position</p>
+
+<div>This div element hasn't position;
+    <div class="absolute">This div element has position: absolute;</div>
+</div>
+
+<div class="relative">This div element has position: relative;
+    <div class="absolute">This div element has position: absolute;</div>
+</div>
+
+
+
+</body>
+</html>

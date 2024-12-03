@@ -1,0 +1,115 @@
+body {
+    width: 95%;
+    margin: 0 auto 0 auto;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+header {
+    height: 200px;
+    text-align: center;
+    color: darkblue;
+    position: relative;
+    background-image: url("../images/bgsky3.jpg");
+    background-size: cover;
+}
+
+header > p:first-child {
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0
+
+}
+
+header > p:nth-child(2) {
+    font-size: 2.4em;
+    font-weight: bold;
+}
+
+header > img {
+    position: absolute;
+    bottom: 60px;
+    right: 250px;
+}
+
+article#news {
+    float: right;
+    width: 25%;
+    background-color: #dddddd;
+    border: 1px #999999;
+    box-sizing: border-box;
+}
+
+article#news p {
+    color: #666666;
+    font-size: 0.9em;
+    padding: 0 10px 0 10px;
+}
+
+article#news h3 {
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+main {
+    width: 75%;
+    box-sizing: border-box;
+
+}
+
+main #logo {
+    float: left;
+    margin: 20px;
+}
+
+article#introduction {
+    background-color: white;
+    color: black;
+    margin: 20px 30px 20px 0;
+}
+
+
+article#introduction .blue {
+    color: blue;
+    font-weight: bold;
+}
+
+section#gallery {
+    background-color: #999999;
+}
+
+section#gallery .foto {
+    margin: 20px;
+    width: 180px;
+    padding: 10px;
+    border: 1px dashed #999999;
+    background-color: white;
+    display: inline-block;
+}
+
+footer {
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+}
+
+footer > section {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: red;
+}
+
+.beneden {
+    background-color: white;
+    color: black;
+    text-align: center  ;
+}

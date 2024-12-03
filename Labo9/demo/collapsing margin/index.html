@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collapsing margin</title>
+  <style>
+    /* Box Styles */
+    .box {
+      width: 200px;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      border: 2px solid #ddd;
+      background-color: #3498db;
+
+    }
+
+    /* Distinct Background Colors */
+    .box1 {
+      background-color: #3498db; /* Blue */
+      margin: 20px 20px 20px 20px;
+    }
+
+    .box2 {
+      background-color: #2ecc71; /* Green */
+      margin: 30px 10px 20px;
+    }
+
+    .box3 {
+      background-color: #e74c3c; /* Red */
+      margin: 30px 10px
+    }
+
+  </style>
+</head>
+<body>
+<h1>Collapsing Margins Demo</h1>
+<span class="box box1">First Box</span>
+<span class="box box2">Second Box</span>
+<span class="box box3">Third Box</span>
+<div class="box box1">First Box</div>
+<div class="box box2">Second Box</div>
+<div class="box box3">Third Box</div>
+</body>
