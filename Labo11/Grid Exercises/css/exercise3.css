@@ -1,0 +1,41 @@
+.container{
+    background-color: cornflowerblue;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.container .block{
+    margin:20px;
+    padding:20px;
+    background-color: white;
+}
+/* begin rij / begin kol / einde rij / einde kol */
+.block.block1{
+    grid-area: 5/5/5/5;
+ }
+.block.block2{
+    grid-area: 5/1/5/1;
+}
+.block.block3{
+    grid-area: 1/5/1/5;
+}
+.block.block4{
+    grid-area: 1/1/1/1;
+}
+.block.block5{
+    grid-area: 2/2/2/2;
+}
+.block.block6{
+    grid-area: 3/3/3/3;
+}
+.block.block7{
+    grid-area: 4/2/4/2;
+}
+.block.block8{
+    grid-area: 4/4/4/4;
+
+}
+.block.block9{
+    grid-area: 2/4/2/4;
+}

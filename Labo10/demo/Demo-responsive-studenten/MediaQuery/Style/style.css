@@ -32,3 +32,15 @@ footer {
     background-color:lightgreen;
 
 }
+@media screen and (max-width:768px){
+    #left {
+        width:100%;
+        background-color:yellowgreen;
+    }
+    #right {
+        width:100%;
+    }
+    footer{
+        display: none;
+    }
+}

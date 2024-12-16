@@ -1,0 +1,64 @@
+
+body {
+	font: 1.2em/1.2 Helvetica, aria, sans-serif;
+	margin: 0 3%;
+}
+
+h1 {
+	font-size: 1.8em;
+	margin: .9em 0 0 0;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 1.5em 0 0 0;
+}
+
+img {
+	max-width: 100%;
+	background: black;
+	padding: 10px;
+}
+
+figure {
+	border-radius: 5px;
+	color: red;
+	margin: 0 0 25px 0;
+	text-align: center;
+
+}
+
+figcaption {
+	font-size: .8em;
+}
+
+
+@media (min-width: 768px) {
+	figure {
+		display: inline-block;
+		float: left;
+		width: 45%;
+		margin-right: 5%;
+		box-sizing: border-box;
+	}
+
+
+	body {
+		background-color: mediumpurple;
+	}
+
+;
+}
+
+
+@media (min-width: 992px) {
+	body {
+		background-color: darkseagreen;
+	}
+
+	figure {
+		width: 30%;
+		margin-right: 3.333%;
+
+	}
+}

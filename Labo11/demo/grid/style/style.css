@@ -1,0 +1,70 @@
+/* items */
+
+section div {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 3em;
+
+}
+
+/* specific item styles */
+
+.item-1 {
+    background: #b03532;
+}
+.item-2 {
+    background: #33a8a5;
+}
+.item-3 {
+    background: #30997a;
+}
+.item-4 {
+    background: #6a478f;
+}
+.item-5 {
+    background: #da6f2b;
+}
+.item-6 {
+    background: #3d8bb1;
+}
+.item-7 {
+    background: #e03f3f;
+}
+.item-8 {
+    background: #59a627;
+}
+.item-9 {
+    background: #4464a1;
+}
+
+/*NIEUW: GRID*/
+section{
+    display: grid; /*to make a HTML element a grid container*/
+    grid-template-columns: 1fr 2fr 1fr;
+/*= grid-template-columns: 25% 50% 25% */
+    grid-template-rows: 1fr 3fr 1fr;
+/* grid-template-rows: auto auto auto; als je ze evengroot wilt.*/
+    grid-gap: 20px; /*witte ruimte ertussen*/
+}
+
+
+@media screen and (max-width: 760px){
+    section{ /*niet meer display:grid schrijven want dat werd hierboven al geschreven*/
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr); /*= herhaal 6 keer 1fr (1fr 1fr 1fr 1fr 1fr 1fr)*/
+    }
+
+    .item-1{
+        grid-area: 6/1/7/3; /* begin rij / begin kol / einde rij / einde kol */
+    }
+    .item-3{
+        grid-area: 2/1/3/3 /* begin rij-lijn / begin kolom-lijn / einde rij-lijn / einde kolom-lijn */
+    }
+    .item-6{
+        grid-area: 4/1/5/3
+    }
+    .item-9{
+        grid-area: 1/1/2/2
+    }
+}
