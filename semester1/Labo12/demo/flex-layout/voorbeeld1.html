@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <title>Title</title>
+  <style>
+
+    body {
+      display: flex;
+      flex-wrap: wrap;/*zodat de blokken niet achter elkaar staan maar onder elkaar*/
+    }
+    body > * {
+      background: #eee;
+      padding: 2rem;
+      text-align: center;
+      border: 5px solid white;
+    }
+    /*De flex-eigenschap is een shorthand voor drie andere CSS-eigenschappen die het gedrag van flex-items binnen
+    een flex-container bepalen. Het definieert hoe een flex-item ruimte inneemt in de container en hoe het
+    reageert op de beschikbare ruimte.
+    .flex-item {
+   flex: <flex-grow> <flex-shrink> <flex-basis>;
+}
+
+    flex-grow
+Bepaalt hoeveel extra ruimte een flex-item kan innemen als er vrije ruimte in de container is.
+Waarde: Een getal (standaard is 0).
+0: Het item groeit niet, ongeacht de vrije ruimte.
+1 of hoger: Het item groeit proportioneel met andere flex-items die ook een flex-grow-waarde hebben.
+
+flex-shrink
+Bepaalt hoeveel een flex-item krimpt als er te weinig ruimte in de container is.
+Waarde: Een getal (standaard is 1).
+0: Het item krimpt niet, zelfs als de container te klein is.
+1 of hoger: Het item krimpt proportioneel met andere flex-items die ook een flex-shrink-waarde hebben.
+flex-basis
+Wat het doet: Bepaalt de startgrootte van het flex-item voordat vrije ruimte wordt verdeeld (of ingekrompen).
+Waarde: Een lengtewaarde (bijvoorbeeld px, %, auto, etc.).
+auto: De grootte van het item wordt bepaald door de inhoud, of door de breedte/hoogte als die is ingesteld.
+Een vaste waarde, zoals 100px: Het item begint met een breedte/hoogte van 100px.
+
+flex-basis bepaalt de initiële grootte van een flex-item voordat er rekening wordt gehouden met flex-grow en flex-shrink.
+     */
+    .header,
+    .footer {
+      flex:  100%;  /* 0 1 100% */
+    }
+    .sidebar {
+      flex: auto; /* auto -> Gebruik de inhoudsgrootte of width/height van het element.*/ /* mag x keer zo groot zijn als de andere (main)*/
+    }
+    .main {
+      flex:  auto;
+    }
+  </style>
+</head>
+<body>
+<header class="header">Header</header>
+<main class="main">Main</main>
+<aside class="sidebar">Sidebar</aside>
+<footer class="footer">Footer</footer>
+</body>
+</html>
+
+
+

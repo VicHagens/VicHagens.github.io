@@ -1,0 +1,71 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: lightskyblue;
+    font-family: Chalkboard, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.border {
+    border: 2px solid black;
+}
+
+.grey-box {
+    background: grey;
+    width: 100px; /*wordt aangepast voor justify-content */
+
+    margin: 10px;
+    padding: 20px;
+    font-size: 2em;
+}
+/* flex maakt alle blokken standaard even hoog, bij float is dat niet het geval*/
+section{
+    background: coral;
+    height: 500px;
+    display: flex;
+
+    /*flex-direction: column;*/
+    /*flex-direction: row-reverse;*/ /*blokken van rechts naar links ipb links naar rechts sorteren*/
+
+    /*flex-wrap: wrap; /*blokken staan weer onder elkaar*/
+    /*flex-wrap: wrap-reverse;*/
+
+
+    justify-content: center; /*flex-start / flex-end / center / space-between*/
+
+    align-items: center; /*flex-start / flex-end / center / space-between*/
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+oplossing Cats
+
+html {
+    background-color: #333;
+    font-family: helvetica;
+}
+
+* {
+    padding: 10px;
+}
+nav {background-color: #ccc;}
+header,
+footer {
+    text-align: center;
+    background: #ddaa00;
+    color: white;
+}
+main {
+    background-color: grey;
+}
+
+body, section {
+    background-color: white;
+    margin: 5px;
+}
+img {
+    background-color: #ccc;
+    padding: 0;
+}
+h1 {
+    margin: 0;
+}
+nav {
+    padding: 5px 2px;
+}
+nav a {
+    margin: 0 5px;
+    background-color: white;
+    color: #ddaa00;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #333;
+}
+
+section > a {
+    background: #fff;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #666;
+    font-size: 1em;
+    text-align: center;
+    display:inline-block;
+    box-sizing: border-box;
+}
+
+
+
+/* relevant CSS */
+nav {
+    display: flex;
+}
+
+nav a {
+    flex-grow: 1;
+}
+
+section > img,
+section > a {
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > section,
+    main > section > p {
+        flex: 1;
+    }
+
+    main {
+        display: flex;
+
+        border-bottom: 10px solid;
+    }
+
+    main > section {
+        margin: 10px;
+    }
+}
