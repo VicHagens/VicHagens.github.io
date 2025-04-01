@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Oefening forms</title>
+</head>
+
+<body>
+<form>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="txtFirstName">First name*: </label>
+        <input type="text" name="txtFirstName" id="txtFirstName" placeholder="Your first name" autofocus required /><br />
+
+        <label for="txtLastName">Last name*: </label>
+        <input type="text" name="txtLastName" id="txtLastName" placeholder="Your last name" required /><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Sports</legend>
+        <p>Which sport do you train?</p>
+        <label><input type="checkbox" name="sports" value="running" /> Running</label><br />
+        <label><input type="checkbox" name="sports" value="swimming" /> Swimming</label><br />
+        <label><input type="checkbox" name="sports" value="rowing" /> Rowing</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" /> Male</label><br />
+        <label><input type="radio" name="gender" value="female" /> Female</label><br />
+        <label><input type="radio" name="gender" value="other" /> Other / Prefer not to say</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Favorites</legend>
+        <label for="txtMovie">Favorite movie: </label>
+        <input type="text" name="txtMovie" id="txtMovie" /><br />
+
+        <label for="txtQuote">Favorite quote: </label>
+        <input type="text" name="txtQuote" id="txtQuote" placeholder="Write your favorite quote" /><br />
+
+        <label for="sltFood">Favorite food: </label>
+        <select multiple size="3" name="sltFood" id="sltFood">
+            <option value="1">Hamburger</option>
+            <option value="2">Hot Dog</option>
+            <option value="3">Pizza</option>
+        </select><br/>
+
+        <label for="txtBrowser">Choose a flavor:</label>
+        <input list="dlBrowsers" id="txtBrowser" name="txtBrowser" />
+        <datalist id="dlBrowsers">
+            <option value="Vanilla">
+            <option value="Chocolate">
+            <option value="Strawberry">
+            <option value="Mint">
+        </datalist><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Security & Contact</legend>
+        <label for="pwd">Password*: </label>
+        <input type="password" name="pwd" id="pwd" required /><br />
+
+        <label for="txtEmail">Email address*: </label>
+        <input type="email" name="txtEmail" id="txtEmail" placeholder="Enter your email address" required /><br />
+
+        <label for="txtUrl">Favorite site: </label>
+        <input type="url" name="txtUrl" id="txtUrl" placeholder="Enter the URL of your favorite site" /><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Additional Information</legend>
+        <label for="nbNumber">Favorite number (1-10): </label>
+        <input type="number" name="nbNumber" id="nbNumber" max="10" min="1" /><br />
+
+        <label for="rngNumber2">Favorite number (11-1000): </label>
+        <input type="range" name="rngNumber2" id="rngNumber2" max="1000" min="11" /><br/>
+
+        <label for="txtDate">When were you born? </label>
+        <input type="date" name="txtDate" id="txtDate" /><br />
+
+        <label for="txtPostcode">Belgium zip-code reg number*: </label>
+        <input type="text" pattern="[1-9][0-9]{3}" name="txtPostcode" id="txtPostcode" placeholder="9999" required /><br/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Miscellaneous</legend>
+        <label for="txtSearch">Search for something: </label>
+        <input type="search" name="txtSearch" id="txtSearch" /><br />
+
+        <label for="txtColor">What is your favorite color? </label>
+        <input type="color" name="txtColor" id="txtColor" /><br />
+
+        <label for="flBestand">Upload a file: </label>
+        <input type="file" name="flBestand" id="flBestand" /><br />
+    </fieldset>
+
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oplossing formwaarden</title>
+    <link href="styles/style.css" rel="stylesheet" />
+
+</head>
+<body>
+<form>
+    <div class="line">
+        <label for="chkIsRoker">Is roker</label>
+        <input type="checkbox" id="chkIsRoker"/>
+    </div>
+
+    <div class="line">
+        <label>Moedertaal</label>
+        <input type="radio" id="rbtMoedertaalNL" name="rbtMoedertaal" value="nl" checked/><label for="rbtMoedertaalNL">Nederlands</label>
+        <input type="radio" id="rbtMoedertaalFR" name="rbtMoedertaal" value="fr"/><label for="rbtMoedertaalFR">Frans</label>
+        <input type="radio" id="rbtMoedertaalEN" name="rbtMoedertaal" value="en"/><label for="rbtMoedertaalEN">Engels</label>
+    </div>
+
+    <div class="line">
+        <label for="selFavorieteBuurland">Favoriete buurland</label>
+        <select id="selFavorieteBuurland">
+            <option>Nederland</option>
+            <option selected>Frankrijk</option>
+            <option>Duitsland</option>
+        </select>
+    </div>
+
+    <div class="line">
+        <label for="selBestelling">Bestelling</label>
+        <select id="selBestelling" multiple size="6">
+            <option>aardappelen</option>
+            <option>brood</option>
+            <option>melk</option>
+            <option>biefstuk</option>
+            <option>chips</option>
+            <option>krant</option>
+        </select>
+    </div>
+
+    <input type="button" id="btnToon" value="Toon resultaat"/>
+    <script src="scripts/code.js"></script>
+</form>
+</body>
+</html>
+
+
+

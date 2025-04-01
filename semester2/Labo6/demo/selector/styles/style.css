@@ -1,0 +1,18 @@
+#myDIV {
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.color{
+    color: red;
+}
+
+.colorPar
+{
+    color: blue;
+}
+
+.colorParDiv
+{
+    color: green;
+}
