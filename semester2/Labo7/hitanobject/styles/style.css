@@ -1,0 +1,12 @@
+
+#playField{
+    height: 600px;
+    width: 800px;
+    border: 1px solid black;
+}
+
+
+#target {
+
+    position: absolute;
+}

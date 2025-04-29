@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <style>
+        img {
+            margin-left: 50px;
+            margin-bottom: 15px;
+        }
+    </style>
+    <title>Opgave Oefening tafels</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>Opgave Oefening: tafels</h1>
+    </div>
+
+    <ul>
+        <li>Maak een webpagina aan met een label, inputfield en button</li>
+        <li>Bij klikken op het label krijgt inputfield de focus</li>
+    </ul>
+    <img src="images/startOefeningTafels.png" class="img-responsive" width="250px">
+    <ul>
+        <li>Bij klikken op de button "Go!" wordt onderaan in een div dynamisch de tafel van vermenigvuldiging van het ingetikte getal toegevoegd</li>
+        <li>Controle of de ingevoerde value in het inputfield effectief een nummer is. Zoniet, alert met foutmelding tonen</li>
+        <li>1 tafel ziet er als volgt uit</li>
+    </ul>
+    <img src="images/oefeningTafelsvoorbeeld1.png" class="img-responsive" width="250px">
+    <ul>
+        <li>Header: Tafel van <i>x</i> aangemaakt op: <i>[tijdstip waarop op de button Go! is gedrukt]</i></li>
+        <li>Enkel tijdstip in header, niet de datum</li>
+        <li>Alle even rijen hebben een grijze achtergrond</li>
+        <li>Breedte: 300px</li>
+        <li>Geen &lt;table&gt; tag gebruiken, maar &lt;div&gt;'s</li>
+        <li>Na toevoegen van een tafel moet inputfield terug leeg gemaakt worden</li>
+        <li>Bouw na iedere ingave alle tafels opnieuw op en toon ze op het scherm</li>
+        <pre>// handige functie om alle children van een element te verwijderen
+// verwijder alle childs van een element
+const verwijderAlleChildren = (element) => {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+}
+}</pre>
+        <li>Voeg css style classes toe om wat padding en margin te voorzien in de tafels</li>
+        <li>Je kan meerdere tafels toevoegen naast elkaar. Zo ziet het eindresultaat eruit:</li>
+    </ul>
+    <img src="images/oefeningTafelsEindresultaat.png" class="img-responsive">
+
+</div>
+
+</body>
+</html>

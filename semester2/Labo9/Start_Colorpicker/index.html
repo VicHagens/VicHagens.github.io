@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Color</title>
+
+	<script type="text/javascript" charset="utf-8" src="scripts/storage.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/swatch.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+	<link rel="stylesheet" href="styles/styles.css">
+</head> 
+
+<body> 
+	<section class="colorPicker">
+		<div class="components">
+			<div class="component">
+				<span>0<input type="range" id="sldRed" class="slider" value="128" min="0" max="255" />255</span>
+				<span>Red</span>
+				<span id="lblRed">0</span>
+			</div>
+			<div class="component">
+				<span>0<input type="range" id="sldGreen" class="slider" value="255" min="0" max="255" />255</span>
+				<span>Green</span>
+				<span id="lblGreen">0</span>
+			</div>
+			<div class="component">
+				<span>0<input type="range" id="sldBlue" class="slider" value="128" min="0" max="255" />255</span>
+				<span>Blue</span>
+				<span id="lblBlue">0</span>
+			</div>
+		</div>
+		<div class="swatch rounded" id="swatch"></div>
+        <input type="button" id="btnSave" value="Save">
+	</section>
+    <section id="swatchComponents"></section>
+    Bugfix met stopPropagation(), zie BUGFIX commentaar in code.
+</body>
+</html> 
