@@ -1,3 +1,42 @@
-.hoofding{
-    margin:20px;
+.youtube-card{
+    background-color: darkred;
+    color:white;
+}
+.twitter-card{
+    background-color: #4644ff;
+    color: white;
+}
+.google-card{
+    background-color: dodgerblue;
+    color:white;
+}
+.instagram-card{
+    background-color: purple;
+    color: white;
+
+}
+
+.youtube-btn{
+    background-color: white;
+    color: darkred;
+}
+.twitter-btn{
+    background-color: white;
+    color: #4644ff;
+}
+.google-btn{
+    background-color: white;
+    color: dodgerblue;
+}
+.instagram-btn{
+    background-color: white;
+    color: purple;
+}
+
+.darkred {
+    background-color: darkred;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-color: #450202;
 }

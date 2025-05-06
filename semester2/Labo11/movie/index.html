@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Your movies</title>
+    <!-- in deze stylesheet mag je je eigen aanpassingen doorvoeren -->
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <!-- fontawesome stylesheets, nodig voor de "like" en "dislike" icons -->
+    <link href="style/all.css" rel="stylesheet" type="text/css">
+    <!-- lijst van films in een Javascript object, dit moet je gebruiken in je eigen script maar mag je niet aanpassen -->
+    <script src="script/movies.js"></script>
+    <!-- in dit javascript bestand mag je je eigen aanpassingen doorvoeren-->
+    <script src="script/script.js"></script>
+<body>
+<div class="content">
+    <div id="header">
+        <h1>The Movie Page</h1>
+
+        <!-- Dit zijn de like en dislike counters bovenaan de pagina.-->
+        <div id="counters">
+            <div class="counter" id="likecounter">
+                <!-- Dit is het "like" icoontje": wordt ingeladen via fontawesome, je kan dit gewoon gebruiken als een stukje HTML. -->
+                <i class='fas fa-thumbs-up'></i>
+                <!-- Pas deze amount aan wanneer de likes wijzigen -->
+                <div class="amount" id="like">0</div>
+            </div>
+            <div class="counter" id="dislikecounter">
+                <!-- Dit is het "dislike" icoontje": wordt ingeladen via fontawesome, je kan dit gewoon gebruiken als een stukje HTML. -->
+                <i class='fas fa-thumbs-down'></i>
+                <!-- Pas deze amount aan wanneer de likes wijzigen -->
+                <div class="amount" id="dislike">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hierin voeg je de lijst van films toe, via Javascript.-->
+    <div id="movielist">
+
+    </div>
+
+    <!-- Dit is de "Liked movies" lijst aan de linkerzijde. Initieel verborgen (visibility CSS), maar wordt zichtbaar wanneer er films geliked worden. -->
+    <div id="likebar" style="visibility: hidden">
+        <h2>Liked movies</h2>
+        <!-- Hieraan voeg je de gelikete movies toe via Javascript. -->
+        <div id="likebarmovies"></div>
+    </div>
+</div>
+</body>
+</html>

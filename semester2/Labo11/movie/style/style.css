@@ -1,0 +1,81 @@
+﻿/*
+ * Deze stylesheet hoef je niet persé te volgen of te gebruiken, maar je kan het wel als inspiratie gebruiken
+ * om de benodigde styling te bekomen.
+ */
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 10px;
+}
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/*
+ * Dit is de hoofdcontainer voor alle inhoud. De plaatsing van de kinderen gebeurt via grid, bijvoorbeeld.
+ */
+.content {
+    margin : 0 auto;
+	display: grid;
+	grid-template-areas: "likebar header" "likebar movielist";
+	grid-template-columns: 300px auto;
+}
+#header { grid-area: header; }
+#movielist { grid-area: movielist; }
+#likebar { grid-area: likebar; }
+
+/*
+ * Fontawesome icoontjes worden actief door de 'fas' class. We geven hier direct een zeker dimensie op, en zorgen voor
+ * wat marge. Als je deze styling liefst anders oplost mag dat ook.
+ */
+.fas {
+	width: 20px;
+	height: 20px;
+	margin: 0px 5px;
+}
+
+/* De counters bovenaan zijn simpele inline-blocks in de voorbeeld screenshots. Als je dit liever anders oplost mag dat ook */
+#like, #dislike, .counter {
+	display: inline-block;
+
+}
+#dislikecounter { color: red; }
+#likecounter { color: green; }
+.counter {
+	padding: 5px;
+	border: 1px solid gray;
+	border-radius: 20px;
+}
+
+/*
+ * Een film in de filmlijst kan je ook via grid stylen. Een voorbeeld template-areas zie je hieronder. De onderstaande
+ * styling is niet direct van toepassing op de gegeven index.html file (er is bijvoorbeeld nog geen grid elementen dat
+ * een grid-area 'title' definieert, of een CSS class '.movie'), aangezien je via Javascript HTML zelf elementen moet
+ * toevoegen. Gebruik de onderstaande CSS dus als inspiratie, of verwijder het als je het niet gebruikt.
+ */
+.movieDiv {
+	display: grid; /* een film element kan een grid zijn, om de subelementen mooi te plaatsen */
+	grid-template-areas: "title title" "buttons buttons" "image description";
+}
+
+
+.title {
+	grid-area: title;
+	font-weight: bold;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.image {
+	grid-area: image;
+}
+
+.buttons {
+	grid-area: buttons;
+	padding: 5px 0px;
+}
+
+.description {
+	grid-area: description;
+	margin: 0px 0px;
+	padding: 0px 20px;
+}
+
