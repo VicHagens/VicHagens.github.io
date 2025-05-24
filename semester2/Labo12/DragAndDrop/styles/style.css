@@ -1,0 +1,26 @@
+
+#dragItem {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    user-select: none;
+}
+
+#dropZone {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #555;
+
+}

@@ -2,7 +2,6 @@
 // Zorg ervoor dat je alle functionaliteit die in de opgave gevraagd wordt voorziet.
 const setup = () => {
     loadMovies();
-
 }
 
 const likeButtons = [];
@@ -11,8 +10,7 @@ const dislikeButtons = [];
 const loadMovies = () => {
     let movielist = document.getElementById("movielist");
 
-    movies.forEach(movie => {
-
+    movies.forEach((movie, index) => {
         let movieDiv = createElementWithClassName("div", "movieDiv");
 
         let title = createElementWithClassName("h2", "title");
@@ -21,21 +19,20 @@ const loadMovies = () => {
         let buttons = createElementWithClassName("div", "buttons");
 
         let like = createElementWithClassName("i", "fas fa-thumbs-up movie"); //i = icon
+        like.dataset.index = index; // Store the movie index in the button
         like.addEventListener("click", likeMovie);
         likeButtons.push(like);
 
-
         let dislike = createElementWithClassName("i", "fas fa-thumbs-down movie");
-        dislike.addEventListener("click", dislikeMovie)
+        dislike.dataset.index = index; // Store the movie index in the button
+        dislike.addEventListener("click", dislikeMovie);
         dislikeButtons.push(dislike);
-
 
         let image = createElementWithClassName("img", "image");
         image.src = movie.imageUrl;
         /* OF image.setAttribute("src","./"+movie.imageUrl);*/
 
         let description = createElementWithClassNameAndText("p", "description", movie.description);
-
 
         // Append all elements to the movieDiv
         movieDiv.appendChild(title);
@@ -49,61 +46,84 @@ const loadMovies = () => {
     });
 }
 
-
-const likeMovie = () => {
+const likeMovie = (event) => {
     const like = event.target;
+    const index = parseInt(like.dataset.index);
+
+    // If dislike button is active, remove dislike first
+    const dislike = dislikeButtons[index];
+    if (dislike.style.color === "red") {
+        unDislike({ target: dislike });
+    }
+
     like.style.color = "green";
-    const index = likeButtons.indexOf(like);
-    let counter = parseInt(document.getElementById("like").textContent)
+    let counter = parseInt(document.getElementById("like").textContent);
     counter += 1;
-    document.getElementById("like").textContent = counter; /*terug in output zetten*/
+    document.getElementById("like").textContent = counter;
 
     like.removeEventListener("click", likeMovie);
     like.addEventListener("click", unLike);
 
-    addToList(index)
+    addToList(index);
 }
 
-const dislikeMovie = () => {
+const dislikeMovie = (event) => {
     const dislike = event.target;
+    const index = parseInt(dislike.dataset.index);
+
+    // If like button is active, remove like first
+    const like = likeButtons[index];
+    if (like.style.color === "green") {
+        unLike({ target: like });
+
+        // If the movie is in the liked list, remove it
+        const likebarmovies = document.getElementById("likebarmovies");
+        const likedItems = likebarmovies.querySelectorAll(".listItem");
+
+        likedItems.forEach(item => {
+            const title = item.querySelector(".title").textContent;
+            if (title === movies[index].title) {
+                item.remove();
+            }
+        });
+    }
+
     dislike.style.color = "red";
-
-    let counter = parseInt(document.getElementById("dislike").textContent)
+    let counter = parseInt(document.getElementById("dislike").textContent);
     counter += 1;
-    document.getElementById("dislike").textContent = counter; /*terug in output zetten*/
-
+    document.getElementById("dislike").textContent = counter;
 
     dislike.removeEventListener("click", dislikeMovie);
     dislike.addEventListener("click", unDislike);
 }
 
-const unLike = (like) => {
+const unLike = (event) => {
+    const like = event.target;
     like.style.color = "black";
-    let counter = parseInt(document.getElementById("like").textContent)
+    let counter = parseInt(document.getElementById("like").textContent);
     counter -= 1;
-    document.getElementById("like").textContent = counter; /*terug in output zetten*/
+    document.getElementById("like").textContent = counter;
 
     like.removeEventListener("click", unLike);
     like.addEventListener("click", likeMovie);
+
+    // Check if likebar should remain visible
+    checkLikebarVisibility();
 }
 
-const unDislike = () => {
-
+const unDislike = (event) => {
     const dislike = event.target;
     dislike.style.color = "black";
 
-    let counter = parseInt(document.getElementById("dislike").textContent)
+    let counter = parseInt(document.getElementById("dislike").textContent);
     counter -= 1;
-    document.getElementById("dislike").textContent = counter; /*terug in output zetten*/
-
+    document.getElementById("dislike").textContent = counter;
 
     dislike.removeEventListener("click", unDislike);
     dislike.addEventListener("click", dislikeMovie);
 }
 
-
 const addToList = (index) => {
-
     let likebar = document.getElementById("likebar");
     likebar.style.visibility = "visible";
 
@@ -120,15 +140,22 @@ const addToList = (index) => {
     listItem.appendChild(trash);
 
     likebarmovies.appendChild(listItem);
-
 }
 
 const remove = (listItem, likeButton) => {
     listItem.remove();
-    unLike(likeButton);
-
+    unLike({ target: likeButton });
 }
 
+/*const checkLikebarVisibility = () => {
+    const likebarmovies = document.getElementById("likebarmovies");
+    const likebar = document.getElementById("likebar");
+
+    // If there are no more liked movies, hide the likebar
+    if (likebarmovies.children.length === 0) {
+        likebar.style.visibility = "hidden";
+    }
+}*/
 
 const createElement = (tag, className = "", textContent = "") => {
     const el = document.createElement(tag);
@@ -138,17 +165,19 @@ const createElement = (tag, className = "", textContent = "") => {
     if (textContent) el.textContent = textContent;
     return el;
 }
-const createElementWithClassName = (element, clasName) =>{
+
+const createElementWithClassName = (element, clasName) => {
     let e = document.createElement(element);
     e.setAttribute("class", clasName);
     return e;
 };
+
 const createElementWithClassNameAndText = (element, className, text) => {
     let e = createElementWithClassName(element, className);
-    /*console.log (e);*/
     e.appendChild(document.createTextNode(text));
     return e;
 }
+
 const createIconButton = (iconClass, buttonClass, onClick) => {
     const button = createElement("a", buttonClass);
     const icon = createElement("i", iconClass);

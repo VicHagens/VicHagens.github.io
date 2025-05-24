@@ -1,0 +1,29 @@
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+.hoofding{
+    margin: 10px 0px 30px 10px;
+}
+.board {
+    display: flex;
+    gap: 20px;
+}
+.column {
+    flex: 1;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 300px;
+}
+.task {
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+.task.dragging {
+    opacity: 0.5;
+}
